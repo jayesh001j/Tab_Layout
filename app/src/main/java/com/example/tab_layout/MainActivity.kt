@@ -16,21 +16,17 @@ class MainActivity : AppCompatActivity() {
         val viewpager = findViewById<ViewPager>(R.id.viewPager)
         var adapter = viewPagerAdapter(supportFragmentManager)
 
-        //method 1
-//        adapter.addFragment(ChatFragment(), "Chats")
-//        adapter.addFragment(StatusFragment(), "Status")
-//        adapter.addFragment(CallFragment(), "Call")
 
         viewpager.adapter = adapter
         tablayout.setupWithViewPager(viewpager)
 
-        //method 2
+        //method 1
         tablayout.getTabAt(0)?.text = "Chats"
         tablayout.getTabAt(1)?.text = "Status"
         tablayout.getTabAt(2)?.text = "Call"
 
 
-//        //method 3
+//        //method 2
 //        tablayout.addTab(tablayout.newTab().setText("Chats"))
 //        tablayout.addTab(tablayout.newTab().setText("Status"))
 //        tablayout.addTab(tablayout.newTab().setText("Call"))
